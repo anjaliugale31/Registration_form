@@ -8,5 +8,5 @@ Files:  Registration.html
         
 Main File: Registration.html
 
-ScrrenShot:
+ScrrenShot:Screenshot from 2020-08-20 16-45-54.png
          
