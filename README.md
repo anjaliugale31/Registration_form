@@ -8,5 +8,6 @@ Files:  Registration.html
         
 Main File: Registration.html
 
-ScrrenShot:Screenshot from 2020-08-20 16-45-54.png
+ScrrenShot:[<img src="./home/anjali/Pictures/Screenshot from 2020-08-20 16-45-54.png">]
+
          
