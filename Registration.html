@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Css link given -->
+    <link rel="stylesheet" href="reg.css">
+
+    <!-- javascript script -->
+    <script src="script.js"></script>
+    <!-- <script src="edc.js"></script> -->
+
+</head>
+
+<body>
+    <!-- Left half Section of web page -->
+    <div class="split_left">
+        <div class="center">
+            
+            <img src ="logo.png" height="230px">
+            <img src="bulb-1.gif" height="170px">
+        
+        </div>
+        
+    </div>
+       
+ <!-- right half section of web page -->
+    <div class="split_right">
+        <marquee scrollamount="10">We Build Solutions ! </marquee><br>
+        <form action="welcome.html" name="myform" onsubmit="return(validiate());">
+        <div class="reg">
+            <!-- table Created -->
+             <table align="center" cellpadding="10" >
+
+                 <!-- Registration form -->
+                <center> <h3>REGISTRATION FORM</h3></center>
+                 <tr>
+                     <!-- Name filed -->
+                     <td class="required"><b>FULL NAME :</b></td>
+                     <td><input type="text" name="name" maxlength="50" placeholder="Enter Your Name">&nbsp;(max 30 characters a-z and A-Z)</td>
+                 </tr>
+                 <tr>
+                     <!-- Gender filed -->
+                     <td class="required"><b>GENDER :</b></td>
+                     <td>
+                     Male <input type="radio" name="Gender" value="Male" />
+                     Female <input type="radio" name="Gender" value="Female" />
+                   
+                  </td>
+                 </tr>
+     
+                 <tr >
+                     <!-- Address -->
+                     <td class="required"><b>ADDRESS :</b></td>
+                     <td ><textarea name="Address" rows="4" cols="30" id="title"placeholder="Enter Address"></textarea>(Address should be short)</td>
+                 </tr>
+     
+     
+                 <tr>
+                     <!-- Email - Id -->
+                     <td class="required"><b>EMAIL ID :</b></td>
+                     <td><input type="email" name="Email_Id" maxlength="100" placeholder="Enter Your Email Id" /></td>
+                </tr>
+     
+                 <tr>
+                     <!-- Mobile_Number -->
+                     <td class="required"><b>MOBILE NUMBER :</b></td>
+                         <td>
+                         +91<input type="text" name="Mobile_Number" maxlength="10" placeholder="Mobile number 10 digit allowed" />
+                         (10 digit number)
+                     </td>
+                 </tr>
+                 <!-- Education selection tag -->
+                  <tr><b><td class="required">EDUCATION:</td></b>
+                  <td> <div id="POItablediv">
+                       <table id="POITable">
+                            <tr>
+                            <td></td>
+                            <td>Percentage</td>
+                            <td>Year</td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr><td>
+                            <select id="oneselect1" >
+                                <option label="Select"></option>
+                                <option value="SSC">SSC</option>
+                                <option value="HSC">HSC</option>
+                                <option value="Diploma">Diploms</option>
+                                <option value="MTech">MTech</option>
+                                <option value="MCA">MCA</option>
+                                <option value="MSc(CS)">MSc(CS)</option>
+                         </select>
+                            </td>
+                    <td><input size=25 type="text" id="latbox" /></td>
+                    <td><input size=25 type="text" id="lngbox" /></td>
+                    <td><input type="button" id="delPOIbutton" value="Delete" onclick="deleteRow(this)" required="" /></td><br>
+                    <td><input type="button" id="addmorePOIbutton" value="Add"  onclick="insRow()" required=""/></td>
+                    <td><input type="button" id="savemorePOIbutton" value="Save"  onclick="saveValues(this)"required=""/></td>
+                  
+                    
+                  </tr>
+                        </table>
+                </tr>
+                          
+                 <tr> 
+                     <!-- Other eductional details -->
+                     <td>OTHER EDUCATION:(optional)</td><td><input type="text" name="other_education" id="o1">
+                         <input type="text" name="other_year" placeholder="Year" id="o2">
+                         <input type="text" name="other_per" placeholder="Enter Percentage %" id="o3">
+                         <!-- <input type="button" value="Clear" onclick="return A4();">   -->
+                         
+                    </td>
+                     
+                 </tr>
+                
+                 <tr>
+                     <!--  skill -->
+                     <td>Skill :</td>
+                     <td>
+                     <div id="POItablediv">
+                        <!-- <input type="button" id="addPOIbutton" value="Add POIs" /><br/><br/> -->
+                        <table id="POITableskill">
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Rate</td>
+                            <td>Delete</td>
+                            <td>Add </td>
+                           </tr>
+                          <tr>
+                            <td>1</td>
+                            <td><input size=25 type="text" id="latbox" placeholder="Meantion skill" /></td>
+                            <td><select readonly=true>
+                                <option label="Rate">Rate</option>
+                                <option value="1" >1</option>
+                                <option value="2" >2</option>
+                                <option value="3" >3</option>
+                                <option value="4" >4</option>
+                                <option value="5" >5</option>
+                                </select></td>
+                            <td><input type="button" id="delPOIbutton" value="Delete" onclick="deleteRowskill1(this)" /></td>
+                            <td><input type="button" id="addmorePOIbutton" value="Add" onclick="insRowskill()" /></td>
+                            <td><input type="button" id="savemorePOIbutton" value="Save"  onclick="saveValuesskill(this)"/></td>
+
+                          </tr>
+                        </table>
+                      </div>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         <!-- Additional skill -->
+                         ADDITIONAL SKILL (optional):
+                     </td>
+                     <td><input type="text" name="a_skill"></td>
+                 </tr>
+     
+                 <tr >
+                     <!-- hobbiess -->
+                     <td >HOBBIES :<br /><br /><br /></td>
+                     <td ><textarea name="hobbies" rows="4" cols="30" placeholder="Give Comma Seperated Values."></textarea> </td>
+                    
+                 </tr>
+     
+                 <tr>
+                     <!-- URL of photo --> 
+                      <td class="required">
+                         <b>PHOTO :</b>
+                     </td>
+                     <td><input type="url" name="picture" id="url" placeholder="Give URL"></td>
+                  
+                 </tr>
+                </table>
+            </td>
+     </div>
+    
+     <br> 
+     <!-- Final submission -->
+     <center><input type="submit" value="SUBMIT"></center><br>
+     <center><input type="reset" value="RESET"></center>
+    </form>  
+
+        <div class="bottom">
+            
+        </div>
+    
+</body>
+</html>
