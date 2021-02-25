@@ -3,6 +3,7 @@
 Note: While giving the url give the Proper URL of img with extension JPG/PNG/JPEG .
         example:https://i.pinimg.com/originals/c4/da/fa/c4dafac9a42e701422be717e13f824c4.jpg
         we can may use above mention URL
+how to run:https://anjaliugale31.github.io/Registration_form/Registration.html
 Files:  Registration.html,
         reg.css,
         welcome.html,
